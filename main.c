@@ -1,46 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_main.c                                   :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 12:16:46 by preina-g          #+#    #+#             */
-/*   Updated: 2022/10/31 13:27:23 by preina-g         ###   ########.fr       */
+/*   Created: 2022/11/03 12:06:23 by preina-g          #+#    #+#             */
+/*   Updated: 2022/11/03 14:04:41 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pslib.h"
 
-int	ft_check_number(char **array)
+void	ft_check(int argc, char const **argv)
 {
-	int	i;
-	int	j;
-
-	i = 1;
-	while (array[i])
-	{
-		j = 0;
-		while (array[i][j])
-		{
-			if (array[i][j] >= '0' && array[i][j] <= '9')
-				j++;
-			else
-			{
-				write (1, "Error", 5);
-				return (1);
-			}		
-		}
-		i++;
-	}
-	return (0);
+	if (argc == 2)
+		ft_check_first_argu(argv[1]);
+	else if (argc > 2)
+		ft_check_intput(argv);
+	else
+		write(1, "Error, no input!!", 17);
 }
 
-int	main(int argc, char **argv)
+int	main(int argc, char const **argv)
 {
-	if (argc > 1)
-		ft_check_number(argv);
-	else
-		write (1, "Error", 5);
+	ft_check(argc, argv);
 	return (0);
 }
