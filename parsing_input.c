@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 12:09:59 by preina-g          #+#    #+#             */
-/*   Updated: 2022/11/03 13:56:18 by preina-g         ###   ########.fr       */
+/*   Updated: 2022/11/03 15:20:01 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,17 @@ char	**ft_check_first_argu(const char *argu)
 	if (flag == 1)
 		return (ft_split(argu));
 	return (0);
+}
+
+void	ft_check_dup(char *input)
+{
+	int	i;
+	int	j;
+	int	letter_count;
+
+	i = 0;
+	while (i < ft_strlen(input))
+	{
+		
+	}
 }
